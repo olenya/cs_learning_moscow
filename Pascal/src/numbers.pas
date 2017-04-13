@@ -38,7 +38,7 @@ var i: word;        // Isn't required if option 1 (while loop).
 begin
 
   output := 0;
-  
+
   { option 2: for loop. }
   for i := 0 to n do
     output += i;

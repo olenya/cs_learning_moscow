@@ -1,28 +1,62 @@
 
 program World;
 
+uses Math;
+
 {$INCLUDE src/geometric_functions.pas}
 {$INCLUDE src/numbers.pas}
+{$INCLUDE src/Armstrong.pas}
 
 // -----------------------------------------------------------
 
-var x, y: word;
-{ var x, y: iNtEgEr; }
+{ var n: integer;// ex.6 p.141 }
+{ var a, b, i: integer;   // ex.4 p.141 }
+{ var s, a: real; } // Teacher's task.
 var chill: string;
 
 begin
 
   while true do begin
 
-    writeln('Enter x...');
-    readln(x);
+    writeln('Let"s play!');
+    
+    armstrongs();
+    
+    // ex.6 p.141
+    {
+    read(n); writeln('');
+    while n > 0 do begin
+      writeln(random(10));
+      n := n - 1;
+    end;
+    }
 
-    { writeln('Enter y...'); }
-    { readln(y); }
-
-
-    writeln('And result isss.... ', func_number_2(x), '!!!');
-    { writeln(x, 'x', y, ' = ', func_number_1(x)); }
+    // Begin ex. 4 p.141
+    {
+    read(a); read(b);
+    writeln('');
+    i := a;
+    
+    repeat
+      writeln(i*i);
+      i := i+1;
+    until i > b;
+    }
+    
+    
+    // Teacher's task.
+    {
+    s := 0;
+    
+    repeat
+      read(a);
+      s := s+a
+    until a = 0;
+   
+   writeln('Summ = ', s:3:2);
+   }
+   // End.
+   
     
     writeln('');
     writeln('Continue?  y/n... ');
